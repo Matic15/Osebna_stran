@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+	background-color: grey;
+	height: 100%;
+}
+
+header {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	padding: 0 30px;
+	background-color: rgb(77, 77, 77);
+	box-shadow: 0 3px 10px grey;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	transition: 1.25s;
+	z-index: 20;
+}
+nav ul {
+	position: relative;
+	display: flex;
+	transition: 0.25s;
+}
+ul li {
+	list-style: none;
+}
+nav ul li a{
+	color: #fff;
+	display: inline-block;
+	padding: 10px 15px;
+	font-size: 1.8em;
+	text-decoration: none;
+}
+nav ul li a:hover {
+	opacity: 0.5;
+}
+section {
+	z-index: 1;
+	padding: 10%;
+	padding-top: 5%;
+	background-color: lightgrey;
+}
+h2 {
+	font-size: 2em;
+	margin-bottom: 10px;
+}
+footer {
+  position: absolute;
+  width: 100%;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: rgba(51,51,51,0.2);
+  z-index: 1;
+}
+
+
+
+.galerija {
+  border: 5px solid grey;
+  margin-top: ;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  left:30%;
+  background-color: #fff;
+}
+.slike {
+  flex: 33.3%;
+  max-width: 33.3%;
+  padding: 0 8px;
+}
+.slike img {
+  margin: 8px 0 8px 0;
+  vertical-align: middle;
+}
+.slikca img {
+	opacity: 0;
+}
+@media (max-width: 1000px) {
+  .slike {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .slike {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+
+@media (max-width: 1000px){
+nav ul {
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+  }
+  nav ul li a {
+  	font-size: 2em;
+  }
+
+
+.svg_zyzz {
+height: 25vw;
+transform: translate(260%,0);
+}

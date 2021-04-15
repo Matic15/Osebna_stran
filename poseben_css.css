@@ -1,0 +1,253 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+	background-color: grey;
+	height: 100%;
+}
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	padding: 0 30px;
+	background-color: rgb(77, 77, 77);
+	box-shadow: 0 3px 10px grey;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	transition: 1.25s;
+	z-index: 20;
+}
+header.sticky {
+	height: 80px;
+}
+header .banner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: 1s;
+}
+header.sticky .banner {
+	opacity: 0.5;
+}
+header .logo_tekst {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50vw;
+	transform: translate(-50%,-50%);
+	font-size: 7.5vw;
+	font-weight: 700;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	transition: 1s;
+	z-index: 1;
+}
+header.sticky .logo_tekst {
+	position: absolute;
+	font-size: 1.2em;
+	width: 10vw;
+	left: 50px;
+	transform: translate(0%,-50%);
+}
+header.sticky .logo_tekst span {
+	display: none;
+}
+nav ul {
+	position: relative;
+	display: flex;
+	transition: 0.25s;
+	transform: translateX(100px);
+	opacity: 0;
+}
+header.sticky nav ul {
+	transform: translateX(0);
+	opacity: 1;
+	transition-delay: 0.75s;
+	opacity: 1;
+  	visibility: visible;
+}
+nav ul li {
+	list-style: none;
+}
+nav ul li a{
+	color: #fff;
+	display: inline-block;
+	padding: 10px 15px;
+	font-size: 1.8em;
+	text-decoration: none;
+}
+nav ul li a:hover {
+	opacity: 0.5;
+}
+section {
+	z-index: 1;
+	margin-top: 70vh;
+	padding: 10%;
+	background-color: lightgrey;
+}
+h2 {
+	font-size: 2em;
+	margin-bottom: 10px;
+}
+footer {
+  position: absolute;
+  width: 100%;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: rgba(51,51,51,0.2);
+  z-index: 1;
+}
+
+
+
+.projekti_box {
+	margin-top: 150px;
+}
+.proba_grid {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(77, 77, 77);
+  padding: 5px;
+}
+.grid_item_1, .grid_item_2 {
+  flex: 50%;
+  background-color: white;
+  border: 2px solid grey;
+  padding: 20px;
+  text-align: center;
+}
+.grid_item_1 p {
+	margin-top: 15px;
+	font-size: 20px;
+}
+.grid_item_2 p {
+	margin-top: 15px;
+	font-size: 20px;
+}
+h3 {
+	font-size: 23px;
+}
+@media (max-width: 800px) {
+  .proba_grid {
+    flex-direction: column;
+  }
+}
+
+
+.galerija_box {
+	margin-top: 150px;
+}
+.galerija {
+  border: 5px solid grey;
+  margin-top: ;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  left:30%;
+  background-color: #fff;
+}
+.slike {
+  flex: 33.3%;
+  max-width: 33.3%;
+  padding: 0 8px;
+}
+.slike img {
+  margin: 8px 0 8px 0;
+  vertical-align: middle;
+}
+.slikca img {
+	opacity: 0;
+}
+@media (max-width: 1000px) {
+  .slike {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .slike {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+.hitra_navigacija {
+	width: 100%;
+	min-height: 100px;
+	background-color: grey;
+	border-radius: 10px;
+	padding: 30px;
+}
+.hitra_navigacija h2{
+    color: white;
+}
+.hitra_navigacija a {
+	color: white;
+	margin-right: 10px;
+}
+.vrh a {
+	color: white;
+	margin-left: 30px;
+}
+
+
+
+@media (max-width: 1000px){
+nav ul {
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+  }
+  nav.active ul {
+  	position: fixed;
+  	top: 80px;
+  	left: 0;
+  	width: 100%;
+  	height: calc(100% - 8);
+  	background: rgb(51,51,51);
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	flex-direction: column;
+  }
+  nav ul li a {
+  	font-size: 2em;
+  }
+  header.sticky .toggle {
+  	position: fixed;
+  	top: 15px;
+  	right: 50px;
+  	width: 50px;
+  	height: 50px;
+  	cursor: pointer;
+  	background: transparent url(Slike/menu.png);
+  	background-repeat: no-repeat;
+  	background-position: center;
+  }
+  header.sticky .toggle.active {
+  	background: transparent url(Slike/close.png);
+  	background-size:35px;
+  	background-repeat: no-repeat;
+  	background-position: center;
+  }
+}
+
+.svg_zyzz {
+height: 25vw;
+transform: translate(260%,0);
+}
