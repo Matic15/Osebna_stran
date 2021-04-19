@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: rgb(217, 217, 217);
+  min-height: 80vh;
+}
+
+/*=====glava=====*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: grey;
+  padding: 7.5px 35px 0 35px;
+  border-bottom: 5px solid yellow;
+  box-shadow: 0 5px 15px rgb(179, 179, 179);
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+img.logo_tekst {
+  height: 60px;
+}
+header nav ul {
+  margin: 0;
+  padding: 5px;
+  position: relative;
+  list-style: none;
+}
+nav li {
+  display: inline;
+}
+nav a {
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 2rem;
+  padding: 5px;
+  margin: 0 5px 0 5px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+nav .link {
+    display: inline-block;
+}
+nav .link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, white, yellow, white);
+    transition: width .3s;
+}
+nav .link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+nav .link:hover {
+  color: rgba(242, 242, 242, 0.7);
+}
+
+/*=====TELO=====*/
+section {
+  margin: 150px 7.5% 7.5% 7.5%;
+  padding: 20px;
+  background-color: rgb(204, 204, 204);
+  box-shadow: 0 5px 10px grey;
+}
+.glavni {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  color: white;
+}
+article {
+  margin-top: 15px;
+  font-size: 1.3em;
+  color: grey;
+}
+
+/*=====NOGA=====*/
+footer {
+  position: absolute;
+  padding: 7px 35px 7px 35px;
+  margin-top: 50px;
+  width: 100%;
+  min-height: 40px;
+  background-color: rgb(204, 204, 204);
+  text-transform: uppercase;
+  box-shadow: 0px -5px 10px #888;
+  color: grey;
+}
+
+
+
+/*=====ODZIVNOST=====*/
+@media (max-width: 1000px) {
+  nav ul {
+    display: none;
+  }
+  #toggle {
+    width: 50px;
+    height: 50px;
+    background-color: lightblue;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+  }
+  #toggle::before {
+    content: '';
+    position: absolute;
+    width: 33px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+    transform: translateY(-15px);
+    box-shadow: 0 15px 0 white;
+  }
+  #toggle::after {
+    content: '';
+    position: absolute;
+    width: 33px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+    transform: translateY(15px);
+  }
+  #toggle.active {
+    background: rgba(204, 204, 204, 0.5);
+  }
+  #toggle.active::before {
+    transform: translateY(0px) rotate(-135deg);
+    box-shadow: 0 0 0 white;
+  }
+   #toggle.active::after {
+    transform: translateY(0px) rotate(135deg);
+    box-shadow: 0 0 0 white;
+  }
+}
+
+
+
+
+
